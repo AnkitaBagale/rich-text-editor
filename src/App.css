@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+
+:root {
+	--gray-800: #111111;
+	--gray-700: #414141;
+	--gray-500: #9ca3af;
+	--gray-300: #d1d5db;
+	--focus-color: #68cef8;
+	--violet: #4338ca;
+}
+
+* {
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+.App {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 1rem;
+	max-width: 45rem;
+	margin: auto;
+}
+.editor-wrapper {
+	width: 100%;
+}
+.rich-text-options-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+/* Rich text editor styling */
+.ProseMirror {
+	margin: 1rem 0;
+}
+.ProseMirror:focus {
+	outline: none;
+}
+
+.ProseMirror img {
+	max-width: 100%;
+	height: auto;
+}
+.ProseMirror .ProseMirror-selectednode {
+	outline: 2px solid var(--focus-color);
+}
+
+a {
+	color: var(--violet);
+}
+
+.ProseMirror p.is-editor-empty:first-child::before {
+	content: 'Write your thoughts...';
+	float: left;
+	color: #ced4da;
+	pointer-events: none;
+	height: 0;
+}
+
+/* Modal */
+
+.modal {
+	background-color: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.modal-content {
+	background-color: white;
+	padding: 2rem;
+	margin: 1rem;
+	overflow: auto;
+}
+.link-input-label {
+	margin-bottom: 0.5rem;
+	display: inline-block;
+}
+.link-input {
+	display: inline-block;
+	margin-bottom: 1rem;
+	padding: 0.5rem;
+	border-radius: 0.3rem;
+	border: 1px solid var(--gray-800);
+}
+
+/* CTA items styling */
+.btn {
+	margin-right: 0.5rem;
+	padding: 0.2rem 1rem;
+	border-radius: 0.3rem;
+	border: none;
+	cursor: pointer;
+	font-weight: 500;
+	font-size: 0.9rem;
+	margin-top: 0.5rem;
+	display: inline-block;
+}
+.btn-primary-black {
+	background-color: var(--gray-800);
+	color: white;
+}
+
+.btn-primary-inactive:hover {
+	background-color: var(--gray-500);
+}
+
+.btn-primary-violet {
+	background-color: var(--violet);
+	color: white;
+}
+
+.btn-primary-inactive {
+	background-color: var(--gray-300);
+	color: var(--gray-800);
+}
