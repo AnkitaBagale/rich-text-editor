@@ -1,4 +1,4 @@
-export const TextStyles = ({ editor }) => {
+export const AddTextStyles = ({ editor }) => {
 	return (
 		<>
 			<button

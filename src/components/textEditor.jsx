@@ -4,7 +4,7 @@ import StarterKit from '@tiptap/starter-kit';
 import Link from '@tiptap/extension-link';
 import Underline from '@tiptap/extension-underline';
 import Image from '@tiptap/extension-image';
-import { RichTextOptions } from './richTextOptions';
+import { AllRichTextOptions } from './allRichTextOptions';
 
 export const TextEditor = () => {
 	const editor = useEditor({
@@ -14,8 +14,8 @@ export const TextEditor = () => {
 
 	return (
 		<>
-			<RichTextOptions editor={editor} />
-			<EditorContent onKeyDown={() => {}} editor={editor} />
+			<AllRichTextOptions editor={editor} />
+			<EditorContent editor={editor} />
 		</>
 	);
 };

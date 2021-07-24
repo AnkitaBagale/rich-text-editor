@@ -1,17 +1,17 @@
-import { TextStyles } from './textStyles';
-import { LinkCoupler } from './linkCoupler';
+import { AddTextStyles } from './addTextStyles';
+import { AddHyperlink } from './addHyperlink';
 import { AddImage } from './addImage';
 import { AddMeme } from './addMeme';
 
-export const RichTextOptions = ({ editor }) => {
+export const AllRichTextOptions = ({ editor }) => {
 	if (!editor) {
 		return null;
 	}
 
 	return (
 		<div className='rich-text-options-wrapper'>
-			<TextStyles editor={editor} />
-			<LinkCoupler editor={editor} />
+			<AddTextStyles editor={editor} />
+			<AddHyperlink editor={editor} />
 			<AddImage editor={editor} />
 			<AddMeme editor={editor} />
 		</div>

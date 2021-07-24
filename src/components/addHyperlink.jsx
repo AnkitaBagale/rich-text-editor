@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Modal } from './modal';
 
-export const LinkCoupler = ({ editor }) => {
+export const AddHyperlink = ({ editor }) => {
 	const [showModal, setShowModal] = useState(false);
 
 	const setLink = (linkInput) => {
