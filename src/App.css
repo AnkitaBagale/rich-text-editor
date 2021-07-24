@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap');
 
 :root {
 	--gray-800: #111111;
@@ -20,20 +21,43 @@
 	justify-content: center;
 	align-items: center;
 	margin: 1rem;
-	max-width: 45rem;
-	margin: auto;
 }
+
+/* Nav and Logo */
+.nav {
+	margin-bottom: 2rem;
+}
+.logo {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	justify-content: flex-end;
+}
+.logo-title {
+	font-family: 'Leckerli One', cursive;
+	margin-left: 0.25rem;
+}
+
+/* wrappers */
 .editor-wrapper {
 	width: 100%;
+	margin: auto;
+	max-width: 45rem;
 }
 .rich-text-options-wrapper {
 	display: flex;
 	flex-wrap: wrap;
+	position: sticky;
+	top: 0;
+	background-color: white;
+	z-index: 1;
+	padding: 0.5rem 0 1rem;
 }
 
 /* Rich text editor styling */
 .ProseMirror {
 	margin: 1rem 0;
+	min-height: 100vh;
 }
 .ProseMirror:focus {
 	outline: none;
@@ -63,7 +87,7 @@ a {
 
 .modal {
 	background-color: rgba(0, 0, 0, 0.5);
-	position: absolute;
+	position: fixed;
 	top: 0;
 	bottom: 0;
 	left: 0;
