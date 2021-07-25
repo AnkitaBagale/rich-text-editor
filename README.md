@@ -7,6 +7,7 @@ It is a text editor which allows user to add text formatting, images and memes i
 
 Live url: https://purple-editor.netlify.app/
 
+
 https://user-images.githubusercontent.com/69760792/126890149-3efde238-5e68-4ff8-85be-b7b44c97705c.mp4
 
 ### How to Use?
@@ -30,9 +31,11 @@ https://user-images.githubusercontent.com/69760792/126890149-3efde238-5e68-4ff8-
 1. To add **image**, click on `Add Image` button and enter image url in pop-up window.
 
    If you want to delete image, then click on the image and press `delete` button on keyboard, or `backspace` will work as well.
+   For Testing: You can use image url- `http://res.cloudinary.com/u-and-i/image/upload/v1626699937/images/chrome-capture_1_qh0byh.png`
 
 1. To add meme, type "**{{yourFavMemer_meme}}**" e.g.{{cat_meme}}, click on `Add Meme` button, meme will get added to the editor.
 
    If you want to delete meme, then click on the image and press `delete` button on keyboard, or `backspace` will work as well.
 
 1. If you want to **reorder** your images in the text editor, just drag and drop anywhere in the editor.
+
