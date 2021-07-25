@@ -9,7 +9,7 @@ Live url: https://purple-editor.netlify.app/
 
 ### Tech Stack
 
-* React
+* ReactJS
 * Vanilla CSS
 * Tiptap Editor
 * Tenor API
