@@ -114,7 +114,7 @@ a {
 	overflow: auto;
 	position: relative;
 	overflow-y: auto;
-	height: 100%;
+	max-height: calc(100% - 2rem);
 }
 
 .close-btn {
