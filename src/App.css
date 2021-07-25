@@ -4,7 +4,6 @@
 
 :root {
 	--gray-800: #111111;
-	--gray-700: #414141;
 	--gray-500: #9ca3af;
 	--gray-300: #d1d5db;
 	--focus-color: #68cef8;
@@ -38,7 +37,7 @@
 	margin-left: 0.25rem;
 }
 
-/* wrappers */
+/* Text area editor */
 .editor-wrapper {
 	width: 100%;
 	margin: auto;
@@ -54,7 +53,6 @@
 	padding: 0.5rem 0 1rem;
 }
 
-/* Rich text editor styling */
 .ProseMirror {
 	min-height: 100vh;
 	padding: 1rem 0 3rem;
@@ -65,8 +63,9 @@
 
 .ProseMirror img {
 	max-width: 100%;
-	height: auto;
+	height: 20rem;
 }
+
 .ProseMirror .ProseMirror-selectednode {
 	outline: 2px solid var(--focus-color);
 }
@@ -115,7 +114,7 @@ a {
 	border: 1px solid var(--gray-800);
 }
 
-/* CTA items styling */
+/* CTA items */
 .btn {
 	margin-right: 0.5rem;
 	padding: 0.2rem 1rem;

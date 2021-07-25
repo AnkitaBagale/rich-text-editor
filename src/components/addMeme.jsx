@@ -1,29 +1,46 @@
 import axios from 'axios';
 
+//Component to add Meme based on entered text
 export const AddMeme = ({ editor }) => {
 	const tenorKey = process.env.REACT_APP_API_KEY;
 
-	const getMeme = async () => {
+	const getMemeFromTheServer = async ({ memeWord }) => {
+		if (memeWord) {
+			const {
+				data: { results },
+			} = await axios.get(
+				`https://g.tenor.com/v1/search?q=${memeWord}&key=${tenorKey}&limit=1`,
+			);
+
+			const memeSrcUrl = results[0].media[0]?.gif?.preview;
+
+			return { memeSrcUrl };
+		}
+		return { memeSrcUrl: null };
+	};
+
+	const uploadMeme = async () => {
 		try {
 			let match = '';
-			let data = editor.getHTML();
 
-			data = data.replace(/\{\{(.+?)_meme\}\}/, (_, keyword) => {
-				match = keyword;
-				return '';
-			});
+			let editorContent = editor.getHTML();
 
-			if (match) {
-				const {
-					data: { results },
-				} = await axios.get(
-					`https://g.tenor.com/v1/search?q=${match}&key=${tenorKey}&limit=1`,
-				);
+			//removes {{memeWord_meme}}
+			editorContent = editorContent.replace(
+				/\{\{(.+?)_meme\}\}/,
+				(_, keyword) => {
+					match = keyword;
+					return '';
+				},
+			);
 
-				data += `<img src="${results[0].media[0]?.gif?.preview}" />`;
+			const { memeSrcUrl } = await getMemeFromTheServer({ memeWord: match });
 
-				editor.commands.setContent(data);
-			}
+			//adds meme to the editor content
+			editorContent += `<img height="50" src="${memeSrcUrl}" />`;
+
+			// sets content back to editor
+			editor.commands.setContent(editorContent);
 		} catch (error) {
 			window.alert('No meme found!');
 			console.log(error);
@@ -31,7 +48,7 @@ export const AddMeme = ({ editor }) => {
 	};
 	return (
 		<>
-			<button className='btn btn-primary-violet' onClick={getMeme}>
+			<button className='btn btn-primary-violet' onClick={uploadMeme}>
 				Add Meme
 			</button>
 		</>

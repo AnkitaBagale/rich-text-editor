@@ -1,4 +1,6 @@
 import logo from '../assets/logo.png';
+
+//Navigation bar
 export const Nav = () => {
 	return (
 		<nav className='nav'>

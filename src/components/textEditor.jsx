@@ -6,6 +6,7 @@ import Underline from '@tiptap/extension-underline';
 import Image from '@tiptap/extension-image';
 import { AllRichTextOptions } from './allRichTextOptions';
 
+// Textarea where user can write the text
 export const TextEditor = () => {
 	const editor = useEditor({
 		extensions: [StarterKit, Link, Underline, Image, Placeholder],

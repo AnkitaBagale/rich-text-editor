@@ -3,6 +3,7 @@ import { AddHyperlink } from './addHyperlink';
 import { AddImage } from './addImage';
 import { AddMeme } from './addMeme';
 
+//Component wrapping all the Rich text editing options in single Componnet
 export const AllRichTextOptions = ({ editor }) => {
 	if (!editor) {
 		return null;

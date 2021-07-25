@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+//Modal component to enter urls
 export const Modal = ({
 	cancelOperationHandler,
 	proceedOperationHandler,

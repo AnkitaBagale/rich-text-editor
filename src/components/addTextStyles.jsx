@@ -1,3 +1,5 @@
+// Component to add basic styles(Bold, Italic, Underline) to the text
+
 export const AddTextStyles = ({ editor }) => {
 	return (
 		<>

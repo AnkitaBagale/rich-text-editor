@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import { Modal } from './modal';
 
+// Component to add hyperlink to the selected text
 export const AddHyperlink = ({ editor }) => {
 	const [showModal, setShowModal] = useState(false);
 
+	//sets the hyperlink to the text
 	const setLink = (linkInput) => {
 		if (linkInput) {
 			editor
@@ -36,6 +38,7 @@ export const AddHyperlink = ({ editor }) => {
 				</button>
 			)}
 
+			{/* Modal to enter hyperlink */}
 			{showModal && (
 				<Modal
 					cancelOperationHandler={() => setShowModal(false)}
