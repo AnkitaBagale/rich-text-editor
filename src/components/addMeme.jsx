@@ -37,10 +37,12 @@ export const AddMeme = ({ editor }) => {
 			const { memeSrcUrl } = await getMemeFromTheServer({ memeWord: match });
 
 			//adds meme to the editor content
-			editorContent += `<img height="50" src="${memeSrcUrl}" />`;
+			if (memeSrcUrl) {
+				editorContent += `<img height="50" src="${memeSrcUrl}" />`;
 
-			// sets content back to editor
-			editor.commands.setContent(editorContent);
+				// sets content back to editor
+				editor.commands.setContent(editorContent);
+			}
 		} catch (error) {
 			window.alert('No meme found!');
 			console.log(error);

@@ -8,6 +8,8 @@
 	--gray-300: #d1d5db;
 	--focus-color: #68cef8;
 	--violet: #4338ca;
+	--z-index-1: 1;
+	--z-index-2: 2;
 }
 
 * {
@@ -28,9 +30,16 @@
 }
 .logo {
 	display: flex;
-	align-items: center;
 	width: 100%;
 	justify-content: flex-end;
+}
+
+.logo-btn {
+	background-color: transparent;
+	border: none;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
 }
 .logo-title {
 	font-family: 'Leckerli One', cursive;
@@ -49,7 +58,7 @@
 	position: sticky;
 	top: 0;
 	background-color: white;
-	z-index: 1;
+	z-index: var(--z-index-1);
 	padding: 0.5rem 0 1rem;
 }
 
@@ -95,13 +104,27 @@ a {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	z-index: var(--z-index-2);
 }
+
 .modal-content {
 	background-color: white;
 	padding: 2rem;
 	margin: 1rem;
 	overflow: auto;
+	position: relative;
 }
+
+.close-btn {
+	border: none;
+	background-color: transparent;
+	font-size: 1.5rem;
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	cursor: pointer;
+}
+
 .link-input-label {
 	margin-bottom: 0.5rem;
 	display: inline-block;
@@ -126,12 +149,15 @@ a {
 	margin-top: 0.5rem;
 	display: inline-block;
 }
+.btn:disabled {
+	cursor: auto;
+}
 .btn-primary-black {
 	background-color: var(--gray-800);
 	color: white;
 }
 
-.btn-primary-inactive:hover {
+.btn-primary-inactive:hover:not(:disabled) {
 	background-color: var(--gray-500);
 }
 
@@ -143,4 +169,43 @@ a {
 .btn-primary-inactive {
 	background-color: var(--gray-300);
 	color: var(--gray-800);
+}
+
+/* utility styles */
+
+.primary-color {
+	color: var(--violet);
+}
+
+.bullet-style {
+	margin-right: 0.5rem;
+}
+
+.list-style-none {
+	list-style: none;
+	padding-inline-start: 0;
+	margin: 0;
+}
+
+.margin-top-2 {
+	margin-top: 0.5rem;
+}
+
+.font-weight-medium {
+	font-weight: 500;
+}
+
+.text-center {
+	text-align: center;
+}
+.margin-bottom-0 {
+	margin-bottom: 0;
+}
+
+.margin-top-0 {
+	margin-top: 0;
+}
+
+b {
+	font-weight: 600;
 }
