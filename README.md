@@ -1,7 +1,7 @@
 
 # Puple Editor
 
-### What is Purple Editor
+### What is Purple Editor?
 
 It is a text editor which allows user to add text formatting, images and memes in the text content.
 
