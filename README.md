@@ -1,5 +1,5 @@
 
-# Puple Editor
+# Purple Editor
 
 ### What is Purple Editor?
 
